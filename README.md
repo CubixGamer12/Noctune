@@ -29,8 +29,6 @@ Here are some screenshots showcasing the application interface:
 |------------------------------------|------------------------------------|------------------------------------|
 | Nightcore Studio                   | Database Manager                   | Media Converter                    |
 
-*Note:* Make sure to add the `screenshots` folder with images named `1.png` through `6.png` in the root of your repository.
-
 ---
 
 ## 🛠️ Requirements to build
