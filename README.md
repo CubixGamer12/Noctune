@@ -19,10 +19,17 @@
 
 ## 🖼️ Screenshots
 
-> Add screenshots here in your repo like:
-> ```
-> ![screenshot1](screenshots/player.png)
-> ```
+Here are some screenshots showcasing the application interface:
+
+| ![Screenshot 1](screenshots/1.png) | ![Screenshot 2](screenshots/2.png) | ![Screenshot 3](screenshots/3.png) |
+|-----------------------------------|-----------------------------------|-----------------------------------|
+| Main Window                      | Downloader                        | Music Player                     |
+
+| ![Screenshot 4](screenshots/4.png) | ![Screenshot 5](screenshots/5.png) | ![Screenshot 6](screenshots/6.png) |
+|------------------------------------|------------------------------------|------------------------------------|
+| Nightcore Studio                   | Media Converter                   | Settings                         |
+
+*Note:* Make sure to add the `screenshots` folder with images named `1.png` through `6.png` in the root of your repository.
 
 ---
 
