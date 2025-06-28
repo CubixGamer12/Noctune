@@ -33,14 +33,9 @@ Here are some screenshots showcasing the application interface:
 
 ---
 
-## 🛠️ Requirements
+## 🛠️ Requirements to build
 
 - Python 3.9+
-- [ffmpeg](https://ffmpeg.org/) (must be installed and in PATH)
+- [ffmpeg](https://ffmpeg.org/)
 - `yt-dlp`
 - PySide6
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
