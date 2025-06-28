@@ -1,0 +1,299 @@
+/*
+ * Catppuccin Mocha Theme
+ *
+ * Paleta kolorów (Mocha):
+ * Base:      #1E1E2E (główne tło)
+ * Mantle:    #181825 (tło paneli, list)
+ * Crust:     #11111B (bardzo ciemne tło)
+ * Text:      #CDD6F4 (główny tekst)
+ * Subtext0:  #A6ADC8 (tekst pomocniczy/jasny)
+ * Surface1:  #45475A (granice, linie, hover)
+ * Surface2:  #585B70 (uchwyty, cienie)
+ * Mauve:     #CBA6F7 (główny akcent, paski postępu)
+ * Blue:      #89B4FA (akcent zaznaczenia)
+ * Lavender:  #B4BEE0 (efekt najazdu myszy na przyciski)
+ */
+
+/* Ogólne style dla całej aplikacji */
+QWidget {
+    background-color: #1E1E2E; /* Base */
+    color: #CDD6F4; /* Text */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Panel nawigacyjny */
+#nav_panel {
+    background-color: #181825; /* Mantle */
+    border-right: 1px solid #45475A; /* Surface1 */
+}
+
+/* Przyciski nawigacyjne (akcentowane) */
+QPushButton {
+    background-color: #CBA6F7; /* Mauve - Główny akcent */
+    color: #181825; /* Tekst na przycisku akcentu */
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    padding-left: 12px;
+}
+
+QPushButton:checked {
+    background-color: #89B4FA; /* Blue - po zaznaczeniu */
+    color: #CDD6F4;
+}
+
+QPushButton:hover {
+    background-color: #89B4FA; /* Blue - po najechaniu */
+    color: #CDD6F4;
+    cursor: pointer;
+}
+
+/* Przyciski w zakładkach (ciemniejszy, ale nadal akcentowany) */
+QPushButton#dark_button {
+    background-color: #CBA6F7; /* Mauve */
+    color: #181825;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton#dark_button:hover {
+    background-color: #89B4FA; /* Blue */
+    color: #CDD6F4;
+}
+
+QPushButton#dark_button:pressed {
+    background-color: #313244; /* Surface0 */
+    color: #CDD6F4;
+}
+
+/* Przyciski z ikonami (np. play, pause, repeat, shuffle) */
+QPushButton#icon_button {
+    background-color: #CBA6F7; /* Mauve */
+    border: 1px solid #45475A; /* Surface1 */
+    padding: 5px;
+    border-radius: 7px;
+    qproperty-iconSize: 32px;
+    color: #181825;
+}
+QPushButton#icon_button:hover {
+    background-color: #89B4FA; /* Blue */
+    color: #CDD6F4;
+}
+QPushButton#icon_button:pressed {
+    background-color: #313244; /* Surface0 */
+    color: #CDD6F4;
+}
+QPushButton#icon_button:checked {
+    background-color: #89B4FA; /* Blue */
+    color: #CDD6F4;
+}
+
+/* Większe przyciski sterujące (play, pause) */
+QPushButton#icon_button_large {
+    background-color: #CBA6F7; /* Mauve */
+    border: 1px solid #45475A;
+    border-radius: 7px;
+    padding: 5px;
+    min-width: 60px;
+    min-height: 60px;
+    qproperty-iconSize: 36px;
+    color: #181825;
+}
+QPushButton#icon_button_large:hover {
+    background-color: #89B4FA; /* Blue */
+    color: #CDD6F4;
+}
+QPushButton#icon_button_large:pressed {
+    background-color: #313244; /* Surface0 */
+    color: #CDD6F4;
+}
+QPushButton#icon_button_large:checked {
+    background-color: #89B4FA; /* Blue */
+    color: #CDD6F4;
+}
+
+/* Paski postępu */
+QProgressBar {
+    border: 2px solid #CBA6F7; /* Mauve */
+    border-radius: 10px;
+    background-color: #45475A; /* Surface1 */
+    color: #CDD6F4;
+    font-weight: bold;
+    height: 25px;
+}
+QProgressBar::chunk {
+    background-color: #CBA6F7; /* Mauve */
+    border-radius: 8px;
+}
+
+/* Pola tekstowe, listy rozwijane, etykiety */
+QLineEdit, QComboBox {
+    background-color: #45475A; /* Surface1 */
+    border: 1px solid #585B70; /* Surface2 */
+    border-radius: 7px;
+    padding: 8px;
+    font-size: 13px;
+    color: #CDD6F4;
+}
+
+/* Listy widżetów (np. lista piosenek) */
+QListWidget {
+    background-color: #181825; /* Mantle */
+    border: 1px solid #45475A; /* Surface1 */
+    border-radius: 7px;
+    color: #CDD6F4;
+    font-size: 14px;
+    padding: 5px;
+}
+QListWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid #45475A; /* Surface1 */
+    color: #CDD6F4;
+}
+QListWidget::item:last {
+    border-bottom: none;
+}
+QListWidget::item:selected {
+    background-color: #89B4FA; /* Blue */
+    color: #1E1E2E; /* Base - dla kontrastu */
+}
+QListWidget::item:hover {
+    background-color: #45475A; /* Surface1 */
+}
+
+/* Suwaki */
+QSlider::groove:horizontal {
+    border: 1px solid #45475A; /* Surface1 */
+    height: 8px;
+    background: #181825; /* Mantle */
+    margin: 2px 0;
+    border-radius: 4px;
+}
+QSlider::handle:horizontal {
+    background: #CBA6F7; /* Mauve */
+    border: 1px solid #CBA6F7;
+    width: 18px;
+    height: 18px;
+    margin: -5px 0;
+    border-radius: 9px;
+}
+QSlider::sub-page:horizontal {
+    background: #CBA6F7; /* Mauve */
+    border-radius: 4px;
+}
+
+/* QSpinBox */
+QSpinBox {
+    background-color: #45475A; /* Surface1 */
+    border: 1px solid #585B70; /* Surface2 */
+    border-radius: 7px;
+    padding: 5px;
+    color: #CDD6F4;
+    selection-background-color: #CBA6F7; /* Mauve */
+}
+QSpinBox::up-button, QSpinBox::down-button {
+    width: 20px;
+    border: none;
+    background-color: #181825; /* Mantle */
+    border-radius: 3px;
+}
+QSpinBox::up-arrow, QSpinBox::down-arrow {
+    image: url(Data/icons/arrow_up_light.png); /* Upewnij się, że ikony strzałek są jasne */
+    width: 10px;
+    height: 10px;
+}
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background-color: #45475A; /* Surface1 */
+}
+
+/* QMessageBox */
+QMessageBox {
+    background-color: #1E1E2E; /* Base */
+    color: #CDD6F4;
+    font-size: 14px;
+}
+QMessageBox QPushButton {
+    background-color: #CBA6F7; /* Mauve */
+    color: #181825;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+QMessageBox QPushButton:hover {
+    background-color: #89B4FA; /* Blue */
+    color: #CDD6F4;
+}
+
+/* QSplitter */
+QSplitter::handle {
+    background-color: #585B70; /* Surface2 */
+}
+QSplitter::handle:hover {
+    background-color: #6C7086; /* Overlay0 */
+}
+QSplitter::handle:horizontal {
+    width: 5px;
+}
+QSplitter::handle:vertical {
+    height: 5px;
+}
+
+/* Style for specific labels with objectName */
+QLabel#h1_label {
+    color: #CBA6F7; /* Mauve */
+}
+
+QLabel#h2_label {
+    color: #B4BEE0; /* Lavender */
+}
+
+QLabel#app_title_label {
+    color: #CBA6F7; /* Mauve */
+}
+
+QLabel#version_label {
+    color: #A6ADC8; /* Subtext0 */
+}
+
+QLabel#description_label {
+    color: #A6ADC8;
+}
+
+QLabel#author_label {
+    color: #A6ADC8;
+}
+
+QLabel#status_label {
+    color: #CDD6F4; /* Standard text color */
+}
+
+QLabel#time_label {
+    color: #CDD6F4;
+}
+
+QLabel#info_label {
+    color: #CDD6F4;
+}
+
+QLabel#slider_label {
+    color: #A6ADC8;
+}
+
+QLabel#slider_value_label {
+    color: #CDD6F4;
+}
+
+QLabel#no_style_label {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: #CDD6F4;
+}

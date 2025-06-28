@@ -1,0 +1,281 @@
+/*
+ * Cappuccino Late Theme
+ *
+ * Paleta kolorów:
+ * Tło: #F5EFE6 (Jasny beż / kremowy)
+ * Tło panelu: #EAE3D5 (Ciemniejszy beż)
+ * Akcent (aktywny): #B47854 (Mokka / Karmel)
+ * Tekst: #3A2F2F (Ciemna czekolada)
+ * Akcent (hover): #C99E7C (Jaśniejszy karmel)
+ * Akcent (border/groove): #D4C1A3 (Złamana biel)
+ */
+
+/* Ogólne style dla całej aplikacji */
+QWidget {
+    background-color: #F5EFE6; /* Jasny beż / kremowy */
+    color: #3A2F2F; /* Domyślny kolor tekstu */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Panel nawigacyjny */
+#nav_panel {
+    background-color: #EAE3D5; /* Ciemniejszy beż */
+    border-right: 1px solid #D4C1A3; /* Delikatna linia oddzielająca */
+}
+
+/* Przyciski nawigacyjne (akcentowane) */
+QPushButton {
+    background-color: #B47854; /* Główny akcent - Mokka */
+    color: white; /* Biały tekst dla kontrastu */
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    padding-left: 12px;
+}
+
+QPushButton:checked {
+    background-color: #8C5F40; /* Ciemniejsza mokka po zaznaczeniu */
+}
+
+QPushButton:hover {
+    background-color: #C99E7C; /* Jaśniejszy mokka po najechaniu */
+    cursor: pointer;
+}
+
+/* Przyciski w zakładkach (ciemniejszy, ale nadal akcentowany) */
+QPushButton#dark_button {
+    background-color: #8C5F40; /* Ciemniejszy kolor akcentu */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton#dark_button:hover {
+    background-color: #B47854; /* Powrót do jasniejszej mokki po najechaniu */
+}
+
+QPushButton#dark_button:pressed {
+    background-color: #6C492E; /* Jeszcze ciemniejszy po kliknięciu */
+}
+
+/* Przyciski z ikonami (np. play, pause, repeat, shuffle) */
+QPushButton#icon_button {
+    background-color: #EAE3D5; /* Tło panelu */
+    border: 1px solid #D4C1A3;
+    padding: 5px;
+    border-radius: 7px;
+    qproperty-iconSize: 32px;
+}
+QPushButton#icon_button:hover {
+    background-color: #D4C1A3;
+}
+QPushButton#icon_button:pressed {
+    background-color: #8C5F40;
+}
+QPushButton#icon_button:checked {
+    background-color: #B47854;
+}
+
+/* Większe przyciski sterujące (play, pause) */
+QPushButton#icon_button_large {
+    background-color: #EAE3D5;
+    border: 1px solid #D4C1A3;
+    border-radius: 7px;
+    padding: 5px;
+    min-width: 60px;
+    min-height: 60px;
+    qproperty-iconSize: 36px;
+}
+QPushButton#icon_button_large:hover {
+    background-color: #D4C1A3;
+}
+QPushButton#icon_button_large:pressed {
+    background-color: #8C5F40;
+}
+QPushButton#icon_button_large:checked {
+    background-color: #B47854;
+}
+
+/* Paski postępu */
+QProgressBar {
+    border: 2px solid #B47854;
+    border-radius: 10px;
+    background-color: #EAE3D5;
+    color: #3A2F2F;
+    font-weight: bold;
+    height: 25px;
+}
+QProgressBar::chunk {
+    background-color: #B47854;
+    border-radius: 8px;
+}
+
+/* Pola tekstowe, listy rozwijane, etykiety */
+QLineEdit, QComboBox {
+    background-color: #D4C1A3;
+    border: 1px solid #C99E7C;
+    border-radius: 7px;
+    padding: 8px;
+    font-size: 13px;
+    color: #3A2F2F;
+}
+/* Listy widżetów (np. lista piosenek) */
+QListWidget {
+    background-color: #EAE3D5;
+    border: 1px solid #D4C1A3;
+    border-radius: 7px;
+    color: #3A2F2F;
+    font-size: 14px;
+    padding: 5px;
+}
+QListWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid #D4C1A3;
+    color: #3A2F2F;
+}
+QListWidget::item:last {
+    border-bottom: none;
+}
+QListWidget::item:selected {
+    background-color: #8C5F40;
+    color: white;
+}
+QListWidget::item:hover {
+    background-color: #D4C1A3;
+}
+
+/* Suwaki */
+QSlider::groove:horizontal {
+    border: 1px solid #D4C1A3;
+    height: 8px;
+    background: #EAE3D5;
+    margin: 2px 0;
+    border-radius: 4px;
+}
+QSlider::handle:horizontal {
+    background: #B47854;
+    border: 1px solid #B47854;
+    width: 18px;
+    height: 18px;
+    margin: -5px 0;
+    border-radius: 9px;
+}
+QSlider::sub-page:horizontal {
+    background: #B47854;
+    border-radius: 4px;
+}
+
+/* QSpinBox */
+QSpinBox {
+    background-color: #D4C1A3;
+    border: 1px solid #C99E7C;
+    border-radius: 7px;
+    padding: 5px;
+    color: #3A2F2F;
+    selection-background-color: #B47854;
+}
+QSpinBox::up-button, QSpinBox::down-button {
+    width: 20px;
+    border: none;
+    background-color: #EAE3D5;
+    border-radius: 3px;
+}
+QSpinBox::up-arrow, QSpinBox::down-arrow {
+    image: url(Data/icons/arrow_up_dark.png); /* Zmieniono na ciemną ikonę */
+    width: 10px;
+    height: 10px;
+}
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background-color: #D4C1A3;
+}
+
+/* QMessageBox */
+QMessageBox {
+    background-color: #F5EFE6;
+    color: #3A2F2F;
+    font-size: 14px;
+}
+QMessageBox QPushButton {
+    background-color: #B47854;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+QMessageBox QPushButton:hover {
+    background-color: #C99E7C;
+}
+
+/* QSplitter */
+QSplitter::handle {
+    background-color: #D4C1A3;
+}
+QSplitter::handle:hover {
+    background-color: #C99E7C;
+}
+QSplitter::handle:horizontal {
+    width: 5px;
+}
+QSplitter::handle:vertical {
+    height: 5px;
+}
+
+/* Style for specific labels with objectName */
+QLabel#h1_label {
+    color: #B47854; /* Accent color */
+}
+
+QLabel#h2_label {
+    color: #C99E7C; /* Lighter accent */
+}
+
+QLabel#app_title_label {
+    color: #B47854; /* Accent color */
+}
+
+QLabel#version_label {
+    color: #6C492E; /* Darker shade */
+}
+
+QLabel#description_label {
+    color: #6C492E;
+}
+
+QLabel#author_label {
+    color: #6C492E;
+}
+
+QLabel#status_label {
+    color: #3A2F2F; /* Standard text color */
+}
+
+QLabel#time_label {
+    color: #3A2F2F;
+}
+
+QLabel#info_label {
+    color: #3A2F2F;
+}
+
+QLabel#slider_label {
+    color: #B47854;
+}
+
+QLabel#slider_value_label {
+    color: #3A2F2F;
+}
+
+QLabel#no_style_label {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: #3A2F2F;
+}

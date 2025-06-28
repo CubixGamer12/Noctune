@@ -1,0 +1,299 @@
+/*
+ * --- DARK THEME TEMPLATE ---
+ *
+ * This QSS stylesheet serves as a template for creating dark themes in PyQt/PySide applications.
+ * It's structured to be easily customizable by replacing the color hex codes.
+ *
+ * --- COLOR PALETTE VARIABLES (REPLACE THESE) ---
+ *
+ * Use a consistent color palette to fill in these variables.
+ * You can find palettes on sites like Catppuccin, Nord, or Dracula.
+ *
+ * @base_bg_color:        #1E1E2E;   - The main background color for the application.
+ * @panel_bg_color:       #181825;   - The background for side panels, lists, and containers.
+ * @surface_color_1:      #45475A;   - A subtle color for borders, lines, and hover effects.
+ * @surface_color_2:      #585B70;   - A slightly brighter surface color for handles or separators.
+ * @accent_color_1:       #CBA6F7;   - The primary accent color for highlights, progress bars, and active states.
+ * @accent_color_2:       #89B4FA;   - A secondary accent color for checked states or different highlights.
+ * @text_color_main:      #CDD6F4;   - The main text color for good readability on dark backgrounds.
+ * @text_color_sub:       #A6ADC8;   - A muted color for secondary text, labels, or descriptions.
+ * @contrast_text_color:  #181825;   - A dark color for text on a bright accent background (for contrast).
+ */
+
+/* --- GENERAL WIDGETS --- */
+/* Styles for all QWidget-based elements by default. */
+QWidget {
+    background-color: #1E1E2E; /* @base_bg_color */
+    color: #CDD6F4; /* @text_color_main */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* --- NAVIGATION PANEL --- */
+/* The main side panel container. */
+#nav_panel {
+    background-color: #181825; /* @panel_bg_color */
+    border-right: 1px solid #45475A; /* @surface_color_1 */
+}
+
+/* --- PUSHBUTTONS (GENERAL) --- */
+/* The default style for all QPushButton widgets. */
+QPushButton {
+    background-color: #CBA6F7; /* @accent_color_1 */
+    color: #181825; /* @contrast_text_color - Dark text for contrast on the bright background. */
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    padding-left: 12px;
+}
+
+/* Style for a button when it is in a checked (toggled) state. */
+QPushButton:checked {
+    background-color: #89B4FA; /* @accent_color_2 */
+    color: #CDD6F4; /* @text_color_main */
+}
+
+/* Style for a button when the mouse hovers over it. */
+QPushButton:hover {
+    background-color: #89B4FA; /* @accent_color_2 */
+    color: #CDD6F4; /* @text_color_main */
+    cursor: pointer;
+}
+
+/* Style for a button when it is being pressed down. */
+QPushButton:pressed {
+    background-color: #313244; /* A slightly darker shade for the pressed effect. */
+    color: #CDD6F4;
+}
+
+/* --- ICON BUTTONS --- */
+/* Buttons designed to primarily display an icon. */
+QPushButton#icon_button {
+    background-color: #CBA6F7; /* @accent_color_1 */
+    border: 1px solid #45475A; /* @surface_color_1 */
+    padding: 5px;
+    border-radius: 7px;
+    qproperty-iconSize: 32px;
+    color: #181825; /* @contrast_text_color */
+}
+QPushButton#icon_button:hover {
+    background-color: #89B4FA; /* @accent_color_2 */
+    color: #CDD6F4; /* @text_color_main */
+}
+QPushButton#icon_button:pressed {
+    background-color: #313244;
+    color: #CDD6F4;
+}
+QPushButton#icon_button:checked {
+    background-color: #89B4FA; /* @accent_color_2 */
+    color: #CDD6F4;
+}
+
+/* --- LARGE ICON BUTTONS --- */
+/* Larger versions of icon buttons, e.g., for play/pause controls. */
+QPushButton#icon_button_large {
+    background-color: #CBA6F7; /* @accent_color_1 */
+    border: 1px solid #45475A; /* @surface_color_1 */
+    border-radius: 7px;
+    padding: 5px;
+    min-width: 60px;
+    min-height: 60px;
+    qproperty-iconSize: 36px;
+    color: #181825; /* @contrast_text_color */
+}
+QPushButton#icon_button_large:hover {
+    background-color: #89B4FA; /* @accent_color_2 */
+    color: #CDD6F4; /* @text_color_main */
+}
+QPushButton#icon_button_large:pressed {
+    background-color: #313244;
+    color: #CDD6F4;
+}
+QPushButton#icon_button_large:checked {
+    background-color: #89B4FA; /* @accent_color_2 */
+    color: #CDD6F4;
+}
+
+/* --- PROGRESS BARS --- */
+QProgressBar {
+    border: 2px solid #CBA6F7; /* @accent_color_1 */
+    border-radius: 10px;
+    background-color: #45475A; /* @surface_color_1 - The empty track color. */
+    color: #CDD6F4; /* @text_color_main */
+    font-weight: bold;
+    height: 25px;
+}
+QProgressBar::chunk {
+    background-color: #CBA6F7; /* @accent_color_1 - The color of the filled part. */
+    border-radius: 8px;
+}
+
+/* --- INPUTS & COMBO BOXES --- */
+QLineEdit, QComboBox {
+    background-color: #45475A; /* @surface_color_1 */
+    border: 1px solid #585B70; /* @surface_color_2 */
+    border-radius: 7px;
+    padding: 8px;
+    font-size: 13px;
+    color: #CDD6F4; /* @text_color_main */
+}
+
+/* --- LIST WIDGETS --- */
+QListWidget {
+    background-color: #181825; /* @panel_bg_color */
+    border: 1px solid #45475A; /* @surface_color_1 */
+    border-radius: 7px;
+    color: #CDD6F4; /* @text_color_main */
+    font-size: 14px;
+    padding: 5px;
+}
+QListWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid #45475A; /* @surface_color_1 - Separator line. */
+    color: #CDD6F4;
+}
+QListWidget::item:last {
+    border-bottom: none;
+}
+QListWidget::item:selected {
+    background-color: #89B4FA; /* @accent_color_2 - Highlight for the selected item. */
+    color: #1E1E2E; /* @base_bg_color - Contrast text color. */
+}
+QListWidget::item:hover {
+    background-color: #45475A; /* @surface_color_1 - Subtle hover effect. */
+}
+
+/* --- SLIDERS --- */
+QSlider::groove:horizontal {
+    border: 1px solid #45475A; /* @surface_color_1 */
+    height: 8px;
+    background: #181825; /* @panel_bg_color - Slider track color. */
+    margin: 2px 0;
+    border-radius: 4px;
+}
+QSlider::handle:horizontal {
+    background: #CBA6F7; /* @accent_color_1 - The draggable handle color. */
+    border: 1px solid #CBA6F7;
+    width: 18px;
+    height: 18px;
+    margin: -5px 0;
+    border-radius: 9px;
+}
+QSlider::sub-page:horizontal {
+    background: #CBA6F7; /* @accent_color_1 - The filled part of the track. */
+    border-radius: 4px;
+}
+
+/* --- SPINBOX --- */
+QSpinBox {
+    background-color: #45475A; /* @surface_color_1 */
+    border: 1px solid #585B70; /* @surface_color_2 */
+    border-radius: 7px;
+    padding: 5px;
+    color: #CDD6F4;
+    selection-background-color: #CBA6F7; /* @accent_color_1 */
+}
+QSpinBox::up-button, QSpinBox::down-button {
+    width: 20px;
+    border: none;
+    background-color: #181825; /* @panel_bg_color */
+    border-radius: 3px;
+}
+QSpinBox::up-arrow, QSpinBox::down-arrow {
+    image: url(Data/icons/arrow_up_light.png); /* Ensure these are light-colored icons. */
+    width: 10px;
+    height: 10px;
+}
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background-color: #45475A; /* @surface_color_1 */
+}
+
+/* --- MESSAGE BOX --- */
+QMessageBox {
+    background-color: #1E1E2E; /* @base_bg_color */
+    color: #CDD6F4;
+    font-size: 14px;
+}
+QMessageBox QPushButton {
+    background-color: #CBA6F7; /* @accent_color_1 */
+    color: #181825; /* @contrast_text_color */
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+QMessageBox QPushButton:hover {
+    background-color: #89B4FA; /* @accent_color_2 */
+    color: #CDD6F4;
+}
+
+/* --- SPLITTER --- */
+QSplitter::handle {
+    background-color: #585B70; /* @surface_color_2 */
+}
+QSplitter::handle:hover {
+    background-color: #6C7086; /* A brighter shade on hover. */
+}
+QSplitter::handle:horizontal {
+    width: 5px;
+}
+QSplitter::handle:vertical {
+    height: 5px;
+}
+
+/* --- LABELS (using objectName for specific styles) --- */
+/* This section provides custom styles for QLabel widgets that have an objectName set. */
+QLabel#h1_label {
+    color: #CBA6F7; /* @accent_color_1 - Primary heading color. */
+}
+
+QLabel#h2_label {
+    color: #B4BEE0; /* A secondary accent color for subheadings. */
+}
+
+QLabel#app_title_label {
+    color: #CBA6F7; /* @accent_color_1 - Color for the main app title. */
+}
+
+QLabel#version_label {
+    color: #A6ADC8; /* @text_color_sub - Muted color for version text. */
+}
+
+QLabel#description_label {
+    color: #A6ADC8; /* @text_color_sub */
+}
+
+QLabel#author_label {
+    color: #A6ADC8; /* @text_color_sub */
+}
+
+QLabel#status_label {
+    color: #CDD6F4; /* @text_color_main - Standard text color for status messages. */
+}
+
+QLabel#time_label {
+    color: #CDD6F4; /* @text_color_main */
+}
+
+QLabel#info_label {
+    color: #CDD6F4; /* @text_color_main */
+}
+
+QLabel#slider_label {
+    color: #A6ADC8; /* @text_color_sub */
+}
+
+QLabel#slider_value_label {
+    color: #CDD6F4; /* @text_color_main */
+}
+
+/* A label with a transparent background and no padding. */
+QLabel#no_style_label {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: #CDD6F4; /* @text_color_main */
+}

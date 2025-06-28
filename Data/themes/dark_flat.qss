@@ -1,0 +1,283 @@
+/*
+ * Dark Flat Theme
+ *
+ * Paleta kolorów:
+ * Tło: #282a36 (Ciemny, prawie czarny)
+ * Tło panelu: #343746 (Grafit)
+ * Akcent (aktywny): #6272a4 (Niebiesko-szary)
+ * Tekst: #f8f8f2 (Jasny biały)
+ * Akcent (hover): #8be9fd (Jasny cyjan)
+ * Akcent (border/groove): #44475a (Ciemny szary)
+ */
+
+/* Ogólne style dla całej aplikacji */
+QWidget {
+    background-color: #282a36;
+    color: #f8f8f2;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Panel nawigacyjny */
+#nav_panel {
+    background-color: #343746;
+    border-right: 1px solid #44475a;
+}
+
+/* Przyciski nawigacyjne (akcentowane) */
+QPushButton {
+    background-color: #6272a4;
+    color: #f8f8f2;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    padding-left: 12px;
+}
+
+QPushButton:checked {
+    background-color: #44475a;
+}
+
+QPushButton:hover {
+    background-color: #8be9fd;
+    color: #282a36; /* Zmiana koloru tekstu dla lepszego kontrastu */
+    cursor: pointer;
+}
+
+/* Przyciski w zakładkach (ciemniejszy) */
+QPushButton#dark_button {
+    background-color: #44475a;
+    color: #f8f8f2;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton#dark_button:hover {
+    background-color: #6272a4;
+}
+
+QPushButton#dark_button:pressed {
+    background-color: #3a3c4a;
+}
+
+/* Przyciski z ikonami */
+QPushButton#icon_button {
+    background-color: #343746;
+    border: 1px solid #44475a;
+    padding: 5px;
+    border-radius: 7px;
+    qproperty-iconSize: 32px;
+}
+QPushButton#icon_button:hover {
+    background-color: #44475a;
+}
+QPushButton#icon_button:pressed {
+    background-color: #6272a4;
+}
+QPushButton#icon_button:checked {
+    background-color: #6272a4;
+}
+
+/* Większe przyciski sterujące (play, pause) */
+QPushButton#icon_button_large {
+    background-color: #343746;
+    border: 1px solid #44475a;
+    border-radius: 7px;
+    padding: 5px;
+    min-width: 60px;
+    min-height: 60px;
+    qproperty-iconSize: 36px;
+}
+QPushButton#icon_button_large:hover {
+    background-color: #44475a;
+}
+QPushButton#icon_button_large:pressed {
+    background-color: #6272a4;
+}
+QPushButton#icon_button_large:checked {
+    background-color: #6272a4;
+}
+
+/* Paski postępu */
+QProgressBar {
+    border: 2px solid #6272a4;
+    border-radius: 10px;
+    background-color: #44475a;
+    color: #f8f8f2;
+    font-weight: bold;
+    height: 25px;
+}
+QProgressBar::chunk {
+    background-color: #6272a4;
+    border-radius: 8px;
+}
+
+/* Pola tekstowe, listy rozwijane */
+QLineEdit, QComboBox {
+    background-color: #44475a;
+    border: 1px solid #6272a4;
+    border-radius: 7px;
+    padding: 8px;
+    font-size: 13px;
+    color: #f8f8f2;
+}
+
+/* Listy widżetów (np. lista piosenek) */
+QListWidget {
+    background-color: #343746;
+    border: 1px solid #44475a;
+    border-radius: 7px;
+    color: #f8f8f2;
+    font-size: 14px;
+    padding: 5px;
+}
+QListWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid #44475a;
+    color: #f8f8f2;
+}
+QListWidget::item:last {
+    border-bottom: none;
+}
+QListWidget::item:selected {
+    background-color: #6272a4;
+    color: #f8f8f2;
+}
+QListWidget::item:hover {
+    background-color: #44475a;
+}
+
+/* Suwaki */
+QSlider::groove:horizontal {
+    border: 1px solid #44475a;
+    height: 8px;
+    background: #343746;
+    margin: 2px 0;
+    border-radius: 4px;
+}
+QSlider::handle:horizontal {
+    background: #6272a4;
+    border: 1px solid #6272a4;
+    width: 18px;
+    height: 18px;
+    margin: -5px 0;
+    border-radius: 9px;
+}
+QSlider::sub-page:horizontal {
+    background: #6272a4;
+    border-radius: 4px;
+}
+
+/* QSpinBox */
+QSpinBox {
+    background-color: #44475a;
+    border: 1px solid #6272a4;
+    border-radius: 7px;
+    padding: 5px;
+    color: #f8f8f2;
+    selection-background-color: #6272a4;
+}
+QSpinBox::up-button, QSpinBox::down-button {
+    width: 20px;
+    border: none;
+    background-color: #343746;
+    border-radius: 3px;
+}
+QSpinBox::up-arrow, QSpinBox::down-arrow {
+    image: url(Data/icons/arrow_up_light.png);
+    width: 10px;
+    height: 10px;
+}
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background-color: #44475a;
+}
+
+/* QMessageBox */
+QMessageBox {
+    background-color: #282a36;
+    color: #f8f8f2;
+    font-size: 14px;
+}
+QMessageBox QPushButton {
+    background-color: #6272a4;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+QMessageBox QPushButton:hover {
+    background-color: #8be9fd;
+}
+
+/* QSplitter */
+QSplitter::handle {
+    background-color: #44475a;
+}
+QSplitter::handle:hover {
+    background-color: #6272a4;
+}
+QSplitter::handle:horizontal {
+    width: 5px;
+}
+QSplitter::handle:vertical {
+    height: 5px;
+}
+
+/* Style for specific labels with objectName */
+QLabel#h1_label {
+    color: #6272a4; /* Accent color */
+}
+
+QLabel#h2_label {
+    color: #6272a4; /* Lighter accent */
+}
+
+QLabel#app_title_label {
+    color: #6272a4;
+}
+
+QLabel#version_label {
+    color: #f8f8f2;
+}
+
+QLabel#description_label {
+    color: #f8f8f2;
+}
+
+QLabel#author_label {
+    color: #f8f8f2;
+}
+
+QLabel#status_label {
+    color: #f8f8f2;
+}
+
+QLabel#time_label {
+    color: #f8f8f2;
+}
+
+QLabel#info_label {
+    color: #f8f8f2;
+}
+
+QLabel#slider_label {
+    color: #6272a4;
+}
+
+QLabel#slider_value_label {
+    color: #f8f8f2;
+}
+
+QLabel#no_style_label {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: #f8f8f2;
+}
